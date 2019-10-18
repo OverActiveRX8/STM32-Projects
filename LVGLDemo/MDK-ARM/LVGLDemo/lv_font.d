@@ -1,0 +1,12 @@
+lvgldemo\lv_font.o: ..\lvgl\src\lv_font\lv_font.c
+lvgldemo\lv_font.o: ..\lvgl\src\lv_font\lv_font.h
+lvgldemo\lv_font.o: ..\lvgl\src\lv_font\../../../lv_conf.h
+lvgldemo\lv_font.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lvgldemo\lv_font.o: ..\lvgl\src\lv_font\../../../lvgl/src/lv_conf_checker.h
+lvgldemo\lv_font.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
+lvgldemo\lv_font.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+lvgldemo\lv_font.o: ..\lvgl\src\lv_font\lv_symbol_def.h
+lvgldemo\lv_font.o: ..\lvgl\src\lv_font\../../../lv_conf.h
+lvgldemo\lv_font.o: ..\lvgl\src\lv_font\../lv_misc/lv_utils.h
+lvgldemo\lv_font.o: ..\lvgl\src\lv_font\../lv_misc/lv_log.h
+lvgldemo\lv_font.o: ..\lvgl\src\lv_font\../lv_misc/../../../lv_conf.h

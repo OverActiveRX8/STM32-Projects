@@ -79,6 +79,7 @@ int main(void)
  	LCD_Init();      
 	tp_dev.init();
 	LCD_Clear(WHITE);
+	POINT_COLOR = BLUE;
 	while(1)
 	{
 		tp_dev.scan(0); 		 
@@ -88,7 +89,9 @@ int main(void)
 			{	
 					printf("%d,%d\r\n",tp_dev.x[0],tp_dev.y[0]);
 			}
-		}    
+		} 			
+		LCD_ShowNum(150,400,tp_dev.x[0],3,24);
+		LCD_ShowNum(280,400,tp_dev.y[0],3,24);   
 	}			
 }
 

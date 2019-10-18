@@ -1,0 +1,11 @@
+lvgldemo\lv_ll.o: ..\lvgl\src\lv_misc\lv_ll.c
+lvgldemo\lv_ll.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lvgldemo\lv_ll.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\string.h
+lvgldemo\lv_ll.o: ..\lvgl\src\lv_misc\lv_ll.h
+lvgldemo\lv_ll.o: ..\lvgl\src\lv_misc\lv_mem.h
+lvgldemo\lv_ll.o: ..\lvgl\src\lv_misc\../../../lv_conf.h
+lvgldemo\lv_ll.o: ..\lvgl\src\lv_misc\../../../lvgl/src/lv_conf_checker.h
+lvgldemo\lv_ll.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
+lvgldemo\lv_ll.o: ..\lvgl\src\lv_misc\lv_log.h
+lvgldemo\lv_ll.o: ..\lvgl\src\lv_misc\../../../lv_conf.h
+lvgldemo\lv_ll.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h

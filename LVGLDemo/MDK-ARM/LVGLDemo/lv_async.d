@@ -1,0 +1,14 @@
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\lv_async.c
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\lv_async.h
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\lv_task.h
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\../../../lv_conf.h
+lvgldemo\lv_async.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\../../../lvgl/src/lv_conf_checker.h
+lvgldemo\lv_async.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\lv_mem.h
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\../../../lv_conf.h
+lvgldemo\lv_async.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\lv_log.h
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\../../../lv_conf.h
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\lv_ll.h
+lvgldemo\lv_async.o: ..\lvgl\src\lv_misc\lv_types.h

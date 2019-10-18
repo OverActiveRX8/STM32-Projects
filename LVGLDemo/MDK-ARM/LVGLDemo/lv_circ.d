@@ -1,0 +1,9 @@
+lvgldemo\lv_circ.o: ..\lvgl\src\lv_misc\lv_circ.c
+lvgldemo\lv_circ.o: ..\lvgl\src\lv_misc\lv_circ.h
+lvgldemo\lv_circ.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
+lvgldemo\lv_circ.o: ..\lvgl\src\lv_misc\lv_area.h
+lvgldemo\lv_circ.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\string.h
+lvgldemo\lv_circ.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+lvgldemo\lv_circ.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lvgldemo\lv_circ.o: ..\lvgl\src\lv_misc\../../../lv_conf.h
+lvgldemo\lv_circ.o: ..\lvgl\src\lv_misc\../../../lvgl/src/lv_conf_checker.h
