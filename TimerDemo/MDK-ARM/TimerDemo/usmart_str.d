@@ -1,4 +1,4 @@
-timerdemo\usmart_str.o: ..\..\LVGLDemo\LCDlib\Src\usmart_str.c
+timerdemo\usmart_str.o: ..\LCDlib\Src\usmart_str.c
 timerdemo\usmart_str.o: ..\..\LVGLDemo\LCDlib\Inc\usmart_str.h
 timerdemo\usmart_str.o: ..\..\LVGLDemo\LCDlib\Inc\sys.h
 timerdemo\usmart_str.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
@@ -27,8 +27,12 @@ timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex
 timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
+timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+timerdemo\usmart_str.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_usart.h
 timerdemo\usmart_str.o: ..\..\LVGLDemo\LCDlib\Inc\usmart.h

@@ -1,106 +1,38 @@
-/* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file    stm32f4xx_it.c
-  * @brief   Interrupt Service Routines.
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
-/* USER CODE END Header */
+ * @FileName: stm32f4xx_it.c
+ * @Description: STM32F407 pulse width measurement IT callback Functions
+ * @Author: Patrick John Palanas
+ * @Date: 2019/10/19
+ */
 
-/* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f4xx_it.h"
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
 #include "lvgl.h"
-/* USER CODE END Includes */
 
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN TD */
+//Personal Variables
+extern int icValue;             //IC Value
+extern uint8_t olCounter;				//Timer Overload Counter
+bool icState = false;						//Polarity State (false=>rising, true=>falling)
+uint32_t timerCounter = 0;			//Timer Value Counter
+extern int pulsePeriod;					//Pulse Width
 
-/* USER CODE END TD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
- 
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
-/* USER CODE BEGIN PV */
-//For input capture
-extern int icValue;
-extern uint8_t olCounter;
-bool icState = false;
-
-//For generating pulse wave
-uint32_t timerCounter = 0;
-extern int pulsePeriod;
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
-/* USER CODE BEGIN PFP */
-
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
-
-/* External variables --------------------------------------------------------*/
+//External Handles
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim6;
 extern TIM_HandleTypeDef htim7;
 extern TIM_HandleTypeDef htim14;
-/* USER CODE BEGIN EV */
 
-/* USER CODE END EV */
-
-/******************************************************************************/
-/*           Cortex-M4 Processor Interruption and Exception Handlers          */ 
-/******************************************************************************/
 /**
   * @brief This function handles Non maskable interrupt.
   */
-void NMI_Handler(void)
-{
-  /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
-
-  /* USER CODE END NonMaskableInt_IRQn 0 */
-  /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
-
-  /* USER CODE END NonMaskableInt_IRQn 1 */
-}
+void NMI_Handler(void){}
 
 /**
   * @brief This function handles Hard fault interrupt.
   */
 void HardFault_Handler(void)
 {
-  /* USER CODE BEGIN HardFault_IRQn 0 */
-
-  /* USER CODE END HardFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_HardFault_IRQn 0 */
-    /* USER CODE END W1_HardFault_IRQn 0 */
-  }
+  while (1){}
 }
 
 /**
@@ -108,14 +40,7 @@ void HardFault_Handler(void)
   */
 void MemManage_Handler(void)
 {
-  /* USER CODE BEGIN MemoryManagement_IRQn 0 */
-
-  /* USER CODE END MemoryManagement_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
-    /* USER CODE END W1_MemoryManagement_IRQn 0 */
-  }
+  while (1){}
 }
 
 /**
@@ -123,14 +48,7 @@ void MemManage_Handler(void)
   */
 void BusFault_Handler(void)
 {
-  /* USER CODE BEGIN BusFault_IRQn 0 */
-
-  /* USER CODE END BusFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_BusFault_IRQn 0 */
-    /* USER CODE END W1_BusFault_IRQn 0 */
-  }
+  while (1){}
 }
 
 /**
@@ -138,88 +56,38 @@ void BusFault_Handler(void)
   */
 void UsageFault_Handler(void)
 {
-  /* USER CODE BEGIN UsageFault_IRQn 0 */
-
-  /* USER CODE END UsageFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
-    /* USER CODE END W1_UsageFault_IRQn 0 */
-  }
+  while (1){}
 }
 
 /**
   * @brief This function handles System service call via SWI instruction.
   */
-void SVC_Handler(void)
-{
-  /* USER CODE BEGIN SVCall_IRQn 0 */
-
-  /* USER CODE END SVCall_IRQn 0 */
-  /* USER CODE BEGIN SVCall_IRQn 1 */
-
-  /* USER CODE END SVCall_IRQn 1 */
-}
+void SVC_Handler(void){}
 
 /**
   * @brief This function handles Debug monitor.
   */
-void DebugMon_Handler(void)
-{
-  /* USER CODE BEGIN DebugMonitor_IRQn 0 */
-
-  /* USER CODE END DebugMonitor_IRQn 0 */
-  /* USER CODE BEGIN DebugMonitor_IRQn 1 */
-
-  /* USER CODE END DebugMonitor_IRQn 1 */
-}
+void DebugMon_Handler(void){}
 
 /**
   * @brief This function handles Pendable request for system service.
   */
-void PendSV_Handler(void)
-{
-  /* USER CODE BEGIN PendSV_IRQn 0 */
-
-  /* USER CODE END PendSV_IRQn 0 */
-  /* USER CODE BEGIN PendSV_IRQn 1 */
-
-  /* USER CODE END PendSV_IRQn 1 */
-}
+void PendSV_Handler(void){}
 
 /**
   * @brief This function handles System tick timer.
   */
 void SysTick_Handler(void)
 {
-  /* USER CODE BEGIN SysTick_IRQn 0 */
-
-  /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
-  /* USER CODE BEGIN SysTick_IRQn 1 */
-
-  /* USER CODE END SysTick_IRQn 1 */
 }
-
-/******************************************************************************/
-/* STM32F4xx Peripheral Interrupt Handlers                                    */
-/* Add here the Interrupt Handlers for the used peripherals.                  */
-/* For the available peripheral interrupt handler names,                      */
-/* please refer to the startup file (startup_stm32f4xx.s).                    */
-/******************************************************************************/
 
 /**
   * @brief This function handles TIM2 global interrupt.
   */
 void TIM2_IRQHandler(void)
 {
-  /* USER CODE BEGIN TIM2_IRQn 0 */
-
-  /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
-  /* USER CODE BEGIN TIM2_IRQn 1 */
-
-  /* USER CODE END TIM2_IRQn 1 */
 }
 
 /**
@@ -227,14 +95,10 @@ void TIM2_IRQHandler(void)
   */
 void TIM8_TRG_COM_TIM14_IRQHandler(void)
 {
-  /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 0 */
+	//LVGL Required Timer ITs
 	lv_tick_inc(10);
 	lv_task_handler();
-  /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 0 */
   HAL_TIM_IRQHandler(&htim14);
-  /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 1 */
-	
-  /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 1 */
 }
 
 /**
@@ -242,13 +106,8 @@ void TIM8_TRG_COM_TIM14_IRQHandler(void)
   */
 void TIM6_DAC_IRQHandler(void)
 {
-  /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
-
-  /* USER CODE END TIM6_DAC_IRQn 0 */
   HAL_TIM_IRQHandler(&htim6);
-  /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
-	olCounter ++;
-  /* USER CODE END TIM6_DAC_IRQn 1 */
+	olCounter ++;															//Timer Overload Counter Add By 1 After IT
 }
 
 /**
@@ -256,46 +115,42 @@ void TIM6_DAC_IRQHandler(void)
   */
 void TIM7_IRQHandler(void)
 {
-  /* USER CODE BEGIN TIM7_IRQn 0 */
-  /* USER CODE END TIM7_IRQn 0 */
   HAL_TIM_IRQHandler(&htim7);
-  /* USER CODE BEGIN TIM7_IRQn 1 */
 	timerCounter ++;
-	if(timerCounter == pulsePeriod)
+	if(timerCounter == pulsePeriod)   			  //If Counter Equals To Pulse Width
 	{
-		HAL_GPIO_TogglePin(GPIOE,GPIO_PIN_1);
-		timerCounter = 0;
+		HAL_GPIO_TogglePin(GPIOE,GPIO_PIN_1);		//Toggle GPIO State
+		timerCounter = 0;		                    //Reset Counter
 	}
-  /* USER CODE END TIM7_IRQn 1 */
 }
 
-/* USER CODE BEGIN 1 */
+/**
+  * @brief This function handles IC interrupt.
+  */
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
 	{
 		if(!icState)
 		{
-			__HAL_TIM_SetCounter(&htim2, 0);
-			HAL_TIM_Base_Start_IT(&htim6);
-			TIM_RESET_CAPTUREPOLARITY(&htim2,TIM_CHANNEL_1);
-			TIM_SET_CAPTUREPOLARITY(&htim2,TIM_CHANNEL_1,TIM_ICPOLARITY_FALLING);
-			icState = true;
+			__HAL_TIM_SetCounter(&htim2, 0);																					//Reset IC counter
+			HAL_TIM_Base_Start_IT(&htim6);																						//Start Timer6 (Overload Counter)
+			TIM_RESET_CAPTUREPOLARITY(&htim2,TIM_CHANNEL_1);													
+			TIM_SET_CAPTUREPOLARITY(&htim2,TIM_CHANNEL_1,TIM_ICPOLARITY_FALLING);			//Reset Polarity
+			icState = true;																														//Toggle State
 		}
 		else
 		{
-			HAL_TIM_Base_Stop_IT(&htim6);
-			__HAL_TIM_SetCounter(&htim6, 0);
-			icValue = 0;
+			HAL_TIM_Base_Stop_IT(&htim6);																							//Stop Timer6 (Overload Counter)
+			__HAL_TIM_SetCounter(&htim6, 0);																					//Reset Timer6 Counter
+			icValue = 0;																															//Reset icValue
 			TIM_RESET_CAPTUREPOLARITY(&htim2,TIM_CHANNEL_1);
-			TIM_SET_CAPTUREPOLARITY(&htim2,TIM_CHANNEL_1,TIM_ICPOLARITY_RISING);
-			icValue += HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_1);
-			icValue += olCounter * 0xFFFF;
-			icValue *= 2;   
-			olCounter = 0;
-			icState = false;
+			TIM_SET_CAPTUREPOLARITY(&htim2,TIM_CHANNEL_1,TIM_ICPOLARITY_RISING);			//Reset Polarity
+			icValue += HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_1);							//Get IC Capture Value
+			icValue += olCounter * 0xFFFF;																						//Add Overload Value
+			icValue *= 2;   																													//Transfer into us
+			olCounter = 0;																														//Reset Overload Counter
+			icState = false;																		                      //Toggle State
 		}
 	}
 }
-/* USER CODE END 1 */
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -1,11 +1,26 @@
+/**
+ * @FileName: screen.c
+ * @Description: STM32F407 pulse width measurement screen display program
+ * @Author: Patrick John Palanas
+ * @Date: 2019/10/19
+ * @Others: Using open source GUI lib "LittleVGL" by Gabor "kisvegabor" Kiss-Vamosi
+ *          Using TFTLCD lib by ALIENTEK
+ */
+
 #include "screen.h"
 
+//Define Button Size
 #define buttonWidth 60
 #define buttonHeight 80
 
-lv_obj_t *output_ta;
-lv_obj_t *input_ta;
+//Global Variables
+lv_obj_t *output_ta;      //Output Text Area
+lv_obj_t *input_ta;       //Input Text Area
 
+/**
+ * @brief: Display Parameters (Buttons, Lables & TextAreas)
+ *         Using LVGL lib
+ */
 void displayScr()
 {
 	//Screen Parameters
@@ -65,6 +80,7 @@ void displayScr()
   label = lv_label_create(btn6, NULL);
   lv_label_set_text(label, "  -\n100");			
 	
+	//Text Areas
 	output_ta = lv_ta_create(lv_scr_act(), NULL);
 	lv_ta_set_one_line(output_ta, true);
 	lv_obj_set_width(output_ta, 100);
@@ -89,6 +105,9 @@ void displayScr()
 	lv_ta_set_text(input_ta, "0us");
 }
 
+/**
+ * @brief: Button1 Event Callback Function
+ */
 static void btn1event(lv_obj_t * btn, lv_event_t event)
 {
 		if(event == LV_EVENT_PRESSED)
@@ -99,6 +118,9 @@ static void btn1event(lv_obj_t * btn, lv_event_t event)
 		}
 }
 
+/**
+ * @brief: Button2 Event Callback Function
+ */
 static void btn2event(lv_obj_t * btn, lv_event_t event)
 {
 		if(event == LV_EVENT_PRESSED)
@@ -109,6 +131,9 @@ static void btn2event(lv_obj_t * btn, lv_event_t event)
 		}
 }
 
+/**
+ * @brief: Button3 Event Callback Function
+ */
 static void btn3event(lv_obj_t * btn, lv_event_t event)
 {
 		if(event == LV_EVENT_PRESSED)
@@ -119,6 +144,9 @@ static void btn3event(lv_obj_t * btn, lv_event_t event)
 		}
 }
 
+/**
+ * @brief: Button4 Event Callback Function
+ */
 static void btn4event(lv_obj_t * btn, lv_event_t event)
 {
 		if(event == LV_EVENT_PRESSED)
@@ -130,6 +158,9 @@ static void btn4event(lv_obj_t * btn, lv_event_t event)
 		}
 }
 
+/**
+ * @brief: Button5 Event Callback Function
+ */
 static void btn5event(lv_obj_t * btn, lv_event_t event)
 {
 		if(event == LV_EVENT_PRESSED)
@@ -141,6 +172,9 @@ static void btn5event(lv_obj_t * btn, lv_event_t event)
 		}
 }
 
+/**
+ * @brief: Button6 Event Callback Function
+ */
 static void btn6event(lv_obj_t * btn, lv_event_t event)
 {
 		if(event == LV_EVENT_PRESSED)
@@ -152,6 +186,13 @@ static void btn6event(lv_obj_t * btn, lv_event_t event)
 		}
 }
 
+/**
+ * @brief: Transfer int into string
+ * @Param: value => transfer number (int)
+					 length => transfer length (int)
+					 addOn => the string following the number after convertion (char*)
+ * @Rtvl: Converted String (Number+Addon) (char*)
+ */
 char* int2String(int value, int length, char* addOn)
 {
     char *string = malloc(sizeof(char) * (length+sizeof(addOn)+1));
@@ -160,6 +201,12 @@ char* int2String(int value, int length, char* addOn)
     return string;
 }
 
+
+/**
+ * @brief: Return the length of an int value
+ * @Param: value => transfer number (int)
+ * @Rtvl: length of value (int)
+ */
 int intSize(int value)
 {
     value++;

@@ -1,9 +1,9 @@
-timerdemo\lv_area.o: ..\..\LVGLDemo\lvgl\src\lv_misc\lv_area.c
-timerdemo\lv_area.o: ..\..\LVGLDemo\lvgl\src\lv_misc\../../../lv_conf.h
+timerdemo\lv_area.o: ..\lvgl\src\lv_misc\lv_area.c
+timerdemo\lv_area.o: ..\lvgl\src\lv_misc\../../../lv_conf.h
 timerdemo\lv_area.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
-timerdemo\lv_area.o: ..\..\LVGLDemo\lvgl\src\lv_misc\../../../lvgl/src/lv_conf_checker.h
-timerdemo\lv_area.o: ..\..\LVGLDemo\lvgl\src\lv_misc\lv_area.h
+timerdemo\lv_area.o: ..\lvgl\src\lv_misc\../../../lvgl/src/lv_conf_checker.h
+timerdemo\lv_area.o: ..\lvgl\src\lv_misc\lv_area.h
 timerdemo\lv_area.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\string.h
 timerdemo\lv_area.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h
-timerdemo\lv_area.o: ..\..\LVGLDemo\lvgl\src\lv_misc\../../../lv_conf.h
-timerdemo\lv_area.o: ..\..\LVGLDemo\lvgl\src\lv_misc\lv_math.h
+timerdemo\lv_area.o: ..\lvgl\src\lv_misc\../../../lv_conf.h
+timerdemo\lv_area.o: ..\lvgl\src\lv_misc\lv_math.h

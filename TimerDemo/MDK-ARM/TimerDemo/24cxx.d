@@ -1,4 +1,4 @@
-timerdemo\24cxx.o: ..\..\LVGLDemo\LCDlib\Src\24cxx.c
+timerdemo\24cxx.o: ..\LCDlib\Src\24cxx.c
 timerdemo\24cxx.o: ..\..\LVGLDemo\LCDlib\Inc\24cxx.h
 timerdemo\24cxx.o: ..\..\LVGLDemo\LCDlib\Inc\sys.h
 timerdemo\24cxx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
@@ -27,9 +27,13 @@ timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
 timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
+timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+timerdemo\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_usart.h
 timerdemo\24cxx.o: ..\..\LVGLDemo\LCDlib\Inc\myiic.h
 timerdemo\24cxx.o: ..\..\LVGLDemo\LCDlib\Inc\delay.h
