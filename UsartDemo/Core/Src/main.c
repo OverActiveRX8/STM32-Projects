@@ -80,8 +80,7 @@ int main(void)
 			ledOn(LED);
 			HAL_Delay(1000);
 			ledOff(LED);
-			HAL_Delay(1000);
-			
+			HAL_Delay(1000);			
 		}
 		#endif
   }

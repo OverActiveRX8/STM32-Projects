@@ -48,7 +48,9 @@
 /* USER CODE BEGIN PV */
 int icValue = 0;
 uint8_t olCounter = 0;
-int pulsePeriod = 1;
+int pulsePeriod = 10;
+
+extern lv_obj_t *input_ta;
 
 static lv_disp_buf_t disp_buf;
 static lv_color_t buf[LV_HOR_RES_MAX * 10];    
@@ -135,8 +137,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		printf("%d\n",icValue);
-		HAL_Delay(1000);
+		lv_ta_set_text(input_ta, int2String(icValue, intSize(icValue), "us"));
+		HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }

@@ -291,7 +291,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 			TIM_SET_CAPTUREPOLARITY(&htim2,TIM_CHANNEL_1,TIM_ICPOLARITY_RISING);
 			icValue += HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_1);
 			icValue += olCounter * 0xFFFF;
-			icValue *= 2;    //TIM2 Period 0.5us
+			icValue *= 2;   
 			olCounter = 0;
 			icState = false;
 		}

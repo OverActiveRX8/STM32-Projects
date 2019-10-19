@@ -1522,12 +1522,13 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_hal_exti.o(.ARM.exidx.text.HAL_EXTI_ClearPending), (8 bytes).
     Removing stm32f4xx_hal_exti.o(.text.HAL_EXTI_GenerateSWI), (12 bytes).
     Removing stm32f4xx_hal_exti.o(.ARM.exidx.text.HAL_EXTI_GenerateSWI), (8 bytes).
+    Removing stm32f4xx_hal_usart.o(.text), (0 bytes).
     Removing system_stm32f4xx.o(.text), (0 bytes).
     Removing system_stm32f4xx.o(.ARM.exidx.text.SystemInit), (8 bytes).
     Removing system_stm32f4xx.o(.text.SystemCoreClockUpdate), (108 bytes).
     Removing system_stm32f4xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
 
-718 unused section(s) (total 24026 bytes) removed from the image.
+719 unused section(s) (total 24026 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1579,6 +1580,7 @@ Image Symbol Table
     stm32f4xx_hal_tim.c                      0x00000000   Number         0  stm32f4xx_hal_tim.o ABSOLUTE
     stm32f4xx_hal_tim_ex.c                   0x00000000   Number         0  stm32f4xx_hal_tim_ex.o ABSOLUTE
     stm32f4xx_hal_uart.c                     0x00000000   Number         0  stm32f4xx_hal_uart.o ABSOLUTE
+    stm32f4xx_hal_usart.c                    0x00000000   Number         0  stm32f4xx_hal_usart.o ABSOLUTE
     stm32f4xx_it.c                           0x00000000   Number         0  stm32f4xx_it.o ABSOLUTE
     system_stm32f4xx.c                       0x00000000   Number         0  system_stm32f4xx.o ABSOLUTE
     tim.c                                    0x00000000   Number         0  tim.o ABSOLUTE
@@ -1967,21 +1969,21 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000188   Data   RO            3    RESET               startup_stm32f407xx.o
-    0x08000188   0x08000188   0x00000000   Code   RO          995  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000188   0x08000188   0x00000004   Code   RO         1002    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0800018c   0x0800018c   0x00000004   Code   RO         1005    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000190   0x08000190   0x00000000   Code   RO         1007    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000190   0x08000190   0x00000000   Code   RO         1009    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000190   0x08000190   0x00000008   Code   RO         1010    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000198   0x08000198   0x00000000   Code   RO         1012    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000198   0x08000198   0x00000000   Code   RO         1014    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000198   0x08000198   0x00000004   Code   RO         1003    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000188   0x08000188   0x00000000   Code   RO          996  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000188   0x08000188   0x00000004   Code   RO         1003    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0800018c   0x0800018c   0x00000004   Code   RO         1006    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000190   0x08000190   0x00000000   Code   RO         1008    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000190   0x08000190   0x00000000   Code   RO         1010    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000190   0x08000190   0x00000008   Code   RO         1011    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000198   0x08000198   0x00000000   Code   RO         1013    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000198   0x08000198   0x00000000   Code   RO         1015    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000198   0x08000198   0x00000004   Code   RO         1004    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x0800019c   0x0800019c   0x00000024   Code   RO            4    .text               startup_stm32f407xx.o
-    0x080001c0   0x080001c0   0x00000062   Code   RO          998    .text               mc_w.l(uldiv.o)
-    0x08000222   0x08000222   0x00000024   Code   RO         1000    .text               mc_w.l(memseta.o)
-    0x08000246   0x08000246   0x0000001e   Code   RO         1016    .text               mc_w.l(llshl.o)
-    0x08000264   0x08000264   0x00000020   Code   RO         1018    .text               mc_w.l(llushr.o)
-    0x08000284   0x08000284   0x00000024   Code   RO         1020    .text               mc_w.l(init.o)
+    0x080001c0   0x080001c0   0x00000062   Code   RO          999    .text               mc_w.l(uldiv.o)
+    0x08000222   0x08000222   0x00000024   Code   RO         1001    .text               mc_w.l(memseta.o)
+    0x08000246   0x08000246   0x0000001e   Code   RO         1017    .text               mc_w.l(llshl.o)
+    0x08000264   0x08000264   0x00000020   Code   RO         1019    .text               mc_w.l(llushr.o)
+    0x08000284   0x08000284   0x00000024   Code   RO         1021    .text               mc_w.l(init.o)
     0x080002a8   0x080002a8   0x00000002   Code   RO          105    .text.BusFault_Handler  stm32f4xx_it.o
     0x080002aa   0x080002aa   0x00000002   PAD
     0x080002ac   0x080002ac   0x0000000c   Code   RO          121    .text.DMA2_Stream2_IRQHandler  stm32f4xx_it.o
@@ -2043,7 +2045,7 @@ Memory Map of the image
     0x08001466   0x08001466   0x00000002   Code   RO          109    .text.SVC_Handler   stm32f4xx_it.o
     0x08001468   0x08001468   0x00000004   Code   RO          115    .text.SysTick_Handler  stm32f4xx_it.o
     0x0800146c   0x0800146c   0x0000009c   Code   RO           28    .text.SystemClock_Config  main.o
-    0x08001508   0x08001508   0x0000004c   Code   RO          980    .text.SystemInit    system_stm32f4xx.o
+    0x08001508   0x08001508   0x0000004c   Code   RO          981    .text.SystemInit    system_stm32f4xx.o
     0x08001554   0x08001554   0x00000058   Code   RO          119    .text.TIM7_IRQHandler  stm32f4xx_it.o
     0x080015ac   0x080015ac   0x000000d0   Code   RO          145    .text.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
     0x0800167c   0x0800167c   0x0000000c   Code   RO          537    .text.UART_DMAAbortOnError  stm32f4xx_hal_uart.o
@@ -2060,13 +2062,13 @@ Memory Map of the image
     0x08001928   0x08001928   0x00000006   Code   RO           15    .text.ledToggle     led.o
     0x0800192e   0x0800192e   0x00000002   PAD
     0x08001930   0x08001930   0x00000038   Code   RO           26    .text.main          main.o
-    0x08001968   0x08001968   0x0000000e   Code   RO         1024    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08001976   0x08001976   0x00000002   Code   RO         1025    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08001978   0x08001978   0x0000000e   Code   RO         1026    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08001986   0x08001986   0x00000010   Data   RO          985    .rodata.AHBPrescTable  system_stm32f4xx.o
-    0x08001996   0x08001996   0x00000008   Data   RO          986    .rodata.APBPrescTable  system_stm32f4xx.o
+    0x08001968   0x08001968   0x0000000e   Code   RO         1025    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001976   0x08001976   0x00000002   Code   RO         1026    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001978   0x08001978   0x0000000e   Code   RO         1027    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001986   0x08001986   0x00000010   Data   RO          986    .rodata.AHBPrescTable  system_stm32f4xx.o
+    0x08001996   0x08001996   0x00000008   Data   RO          987    .rodata.APBPrescTable  system_stm32f4xx.o
     0x0800199e   0x0800199e   0x00000002   PAD
-    0x080019a0   0x080019a0   0x00000020   Data   RO         1023    Region$$Table       anon$$obj.o
+    0x080019a0   0x080019a0   0x00000020   Data   RO         1024    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080019c0, Size: 0x00000500, Max: 0x00020000, ABSOLUTE)
@@ -2074,7 +2076,7 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000   0x080019c0   0x00000008   Data   RW          943    .data..L_MergedGlobals  stm32f4xx_hal.o
-    0x20000008   0x080019c8   0x00000004   Data   RW          984    .data.SystemCoreClock  system_stm32f4xx.o
+    0x20000008   0x080019c8   0x00000004   Data   RW          985    .data.SystemCoreClock  system_stm32f4xx.o
     0x2000000c   0x080019cc   0x00000004   PAD
     0x20000010        -       0x00000002   Zero   RW           35    .bss..L_MergedGlobals  main.o
     0x20000012   0x080019cc   0x00000002   PAD
