@@ -57,6 +57,13 @@ void displayScr()
   lv_obj_align(btn6, btn5, LV_ALIGN_IN_RIGHT_MID, 100, 0); 
   label = lv_label_create(btn6, NULL);
   lv_label_set_text(label, "  -\n100");			
+	
+	lv_obj_t *input_ta = lv_ta_create(lv_scr_act(), NULL);
+	lv_ta_set_one_line(input_ta, true);
+	lv_obj_set_width(input_ta, 100);
+	lv_obj_set_pos(input_ta, 185, 300);
+	lv_ta_set_text(input_ta, "");
+	lv_ta_set_cursor_type(input_ta, NULL);
 }
 
 static void btn1event(lv_obj_t * btn, lv_event_t event)

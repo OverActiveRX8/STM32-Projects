@@ -39,6 +39,8 @@ extern "C" {
 #include "usmart.h"
 #include "usart.h"
 #include "stdbool.h"
+#include "lvgl.h"
+#include "screen.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
