@@ -3,7 +3,7 @@
 <title>Static Call Graph - [TimerDemo\TimerDemo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image TimerDemo\TimerDemo.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Oct 19 19:29:48 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Oct 22 11:38:33 2019
 <BR><P>
 <H3>Maximum Stack Usage =        804 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1992,6 +1992,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[2ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usmart_sys_cmd_exe
 <LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usmart_scan
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usmart_exe
@@ -2074,7 +2075,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usmart_config.o(.data)
 </UL>
-<P><STRONG><a name="[168]"></a>displayScr</STRONG> (Thumb, 762 bytes, Stack size 56 bytes, screen.o(i.displayScr))
+<P><STRONG><a name="[168]"></a>displayScr</STRONG> (Thumb, 754 bytes, Stack size 56 bytes, screen.o(i.displayScr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 688<LI>Call Chain = displayScr &rArr; lv_ta_set_text &rArr; lv_ta_add_char &rArr; lv_ta_add_text &rArr;  lv_ta_add_text (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
@@ -2082,7 +2083,6 @@ Global Symbols
 <LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_type
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
 <LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_width
 <LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_size
 <LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
@@ -3114,7 +3114,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[8f]"></a>lv_indev_read_task</STRONG> (Thumb, 250 bytes, Stack size 32 bytes, lv_indev.o(i.lv_indev_read_task))
-<BR><BR>[Stack]<UL><LI>Max Depth = 276<LI>Call Chain = lv_indev_read_task &rArr; indev_pointer_proc &rArr; indev_proc_press &rArr; indev_drag &rArr; lv_obj_set_x &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
+<BR><BR>[Stack]<UL><LI>Max Depth = 276<LI>Call Chain = lv_indev_read_task &rArr; indev_pointer_proc &rArr; indev_proc_press &rArr; indev_drag &rArr; lv_obj_set_y &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
 </UL>
 <BR>[Calls]<UL><LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_read
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_reset_query_handler
@@ -4062,10 +4062,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align
+<BR>[Called By]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_create
 <LI><a href="#[266]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align_origo
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
 <LI><a href="#[26b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag_throw
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag
@@ -4257,12 +4257,12 @@ Global Symbols
 <LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_one_line
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
 <LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displayScr
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_create
 <LI><a href="#[266]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align_origo
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_y
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
 <LI><a href="#[26b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
 <LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_pointer_proc
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag_throw
@@ -4347,8 +4347,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_y
 </UL>
-<BR>[Called By]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displayScr
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag_throw
+<BR>[Called By]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag_throw
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag
 <LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scrollable_signal
@@ -4789,10 +4788,10 @@ Global Symbols
 <P><STRONG><a name="[290]"></a>lv_ta_set_cursor_pos</STRONG> (Thumb, 432 bytes, Stack size 96 bytes, lv_ta.o(i.lv_ta_set_cursor_pos))
 <BR><BR>[Stack]<UL><LI>Max Depth = 424<LI>Call Chain = lv_ta_set_cursor_pos &rArr; refr_cursor_area &rArr; lv_label_get_letter_pos &rArr; lv_txt_get_next_line &rArr; lv_font_get_glyph_width &rArr; lv_font_get_glyph_dsc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
+<BR>[Calls]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_y
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_y
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_x
 <LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
@@ -5084,7 +5083,7 @@ Global Symbols
 <LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_glyph_dsc_id
 </UL>
 
-<P><STRONG><a name="[70]"></a>main</STRONG> (Thumb, 198 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[70]"></a>main</STRONG> (Thumb, 210 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 688<LI>Call Chain = main &rArr; displayScr &rArr; lv_ta_set_text &rArr; lv_ta_add_char &rArr; lv_ta_add_text &rArr;  lv_ta_add_text (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
@@ -5111,6 +5110,7 @@ Global Symbols
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;intSize
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2String
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displayScr
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
@@ -5461,7 +5461,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[184]"></a>indev_button_proc</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, lv_indev.o(i.indev_button_proc))
-<BR><BR>[Stack]<UL><LI>Max Depth = 244<LI>Call Chain = indev_button_proc &rArr; indev_proc_press &rArr; indev_drag &rArr; lv_obj_set_x &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
+<BR><BR>[Stack]<UL><LI>Max Depth = 244<LI>Call Chain = indev_button_proc &rArr; indev_proc_press &rArr; indev_drag &rArr; lv_obj_set_y &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
 </UL>
 <BR>[Calls]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
 <LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
@@ -5470,11 +5470,11 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[187]"></a>indev_drag</STRONG> (Thumb, 530 bytes, Stack size 64 bytes, lv_indev.o(i.indev_drag))
-<BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = indev_drag &rArr; lv_obj_set_x &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
+<BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = indev_drag &rArr; lv_obj_set_y &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
+<BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_y
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_y
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_x
 <LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
@@ -5492,11 +5492,11 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[193]"></a>indev_drag_throw</STRONG> (Thumb, 428 bytes, Stack size 40 bytes, lv_indev.o(i.indev_drag_throw))
-<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = indev_drag_throw &rArr; lv_obj_set_x &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
+<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = indev_drag_throw &rArr; lv_obj_set_y &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
+<BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_y
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_y
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_x
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_drag_throw
@@ -5546,7 +5546,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[19f]"></a>indev_pointer_proc</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, lv_indev.o(i.indev_pointer_proc))
-<BR><BR>[Stack]<UL><LI>Max Depth = 244<LI>Call Chain = indev_pointer_proc &rArr; indev_proc_press &rArr; indev_drag &rArr; lv_obj_set_x &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
+<BR><BR>[Stack]<UL><LI>Max Depth = 244<LI>Call Chain = indev_pointer_proc &rArr; indev_proc_press &rArr; indev_drag &rArr; lv_obj_set_y &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
 </UL>
 <BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
@@ -5556,7 +5556,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[185]"></a>indev_proc_press</STRONG> (Thumb, 884 bytes, Stack size 24 bytes, lv_indev.o(i.indev_proc_press))
-<BR><BR>[Stack]<UL><LI>Max Depth = 228<LI>Call Chain = indev_proc_press &rArr; indev_drag &rArr; lv_obj_set_x &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
+<BR><BR>[Stack]<UL><LI>Max Depth = 228<LI>Call Chain = indev_proc_press &rArr; indev_drag &rArr; lv_obj_set_y &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_scr_act
 <LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_protected
@@ -5577,7 +5577,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[186]"></a>indev_proc_release</STRONG> (Thumb, 602 bytes, Stack size 24 bytes, lv_indev.o(i.indev_proc_release))
-<BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = indev_proc_release &rArr; indev_drag_throw &rArr; lv_obj_set_x &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
+<BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = indev_proc_release &rArr; indev_drag_throw &rArr; lv_obj_set_y &rArr; lv_obj_set_pos &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_protected
 <LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
@@ -6578,12 +6578,12 @@ Local Symbols
 <P><STRONG><a name="[99]"></a>lv_page_scrollable_signal</STRONG> (Thumb, 1286 bytes, Stack size 104 bytes, lv_page.o(i.lv_page_scrollable_signal))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = lv_page_scrollable_signal &rArr; lv_page_start_edge_flash &rArr; lv_anim_create &rArr; lv_anim_del &rArr; lv_ll_rem &rArr; node_set_prev
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
+<BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_inv_area
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_y
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_x
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_y
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_x
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords

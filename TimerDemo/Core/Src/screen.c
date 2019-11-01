@@ -30,7 +30,7 @@ void displayScr()
 	//Label Parameters
   lv_obj_t *label = lv_label_create(scr, NULL); 
   lv_label_set_text(label, "Pulse Width Measurement");
-  lv_obj_set_x(label, 50);   
+  //lv_obj_set_x(label, 50);   
 	lv_obj_align(label, NULL, LV_ALIGN_IN_TOP_MID, 0, 20);  
 	
 	lv_obj_t *btn_label = lv_label_create(scr, NULL);

@@ -1,6 +1,6 @@
 /**
  * @FileName: main.c
- * @Description: STM32F407 pulse width measurement main progarm 
+ * @Description: STM32F407 pulse width measurement main program 
  * @Author: Patrick John Palanas
  * @Date: 2019/10/19
  * @Others: Using open source GUI lib "LittleVGL" by Gabor "kisvegabor" Kiss-Vamosi
@@ -78,7 +78,8 @@ int main(void)
   while (1)
   {
 		lv_ta_set_text(input_ta, int2String(icValue, intSize(icValue), "us"));  //Print IC Value onto LCD (by LVGL)
-		HAL_Delay(100);																													//Delay 100ms
+		printf("Width: %d us\r\n", icValue);
+		HAL_Delay(500);																													//Delay 100ms
   }
 }
 

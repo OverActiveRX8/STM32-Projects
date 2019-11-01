@@ -1,0 +1,15 @@
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\lv_font_fmt_txt.c
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\lv_font.h
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\../../../lv_conf.h
+adcdemo\lv_font_fmt_txt.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\../../../lvgl/src/lv_conf_checker.h
+adcdemo\lv_font_fmt_txt.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
+adcdemo\lv_font_fmt_txt.o: D:\Programs\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\lv_symbol_def.h
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\../../../lv_conf.h
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\lv_font_fmt_txt.h
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\../../../lv_conf.h
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\../lv_misc/lv_types.h
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\../lv_misc/lv_log.h
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\../lv_misc/../../../lv_conf.h
+adcdemo\lv_font_fmt_txt.o: ..\lvgl\src\lv_font\../lv_misc/lv_utils.h
